@@ -15,7 +15,7 @@ function generatoComputerChoice(){
 
 function bat(){
     if(computerChoice == 'Ball'){
-        result ='User Won.';
+        result = 'User Won.';
     }
     else if(computerChoice == 'Bat'){
         result = 'Match Tie';
@@ -23,7 +23,7 @@ function bat(){
         result = 'Computer Wins.'
     }
 
-    alert(`Your Have Chosen Bat. Computer Choice is ${computerChoice} : ${result}`);
+    return alert(`Your Have Chosen Bat. Computer Choice is ${computerChoice} : ${result}`);
 }
 function ball(){
     if(computerChoice == 'Ball'){
@@ -34,7 +34,7 @@ function ball(){
     }else if(computerChoice == 'Stump'){
         result ='User Wins.';
     }
-    alert(`Your Have Chosen Ball. Computer Choice is ${computerChoice} : ${result}`);
+    return alert(`Your Have Chosen Ball. Computer Choice is ${computerChoice} : ${result}`);
 }
 function stump(){
     if(computerChoice == 'Ball'){
@@ -45,5 +45,5 @@ function stump(){
     }else if(computerChoice == 'Stump'){
         result = 'Math Tie.';
     }
-    alert(`Your Have Chosen Stump. Computer Choice is ${computerChoice} : ${result}`);
+    return alert(`Your Have Chosen Stump. Computer Choice is ${computerChoice} : ${result}`);
 }
