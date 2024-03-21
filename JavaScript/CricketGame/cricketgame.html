@@ -8,11 +8,17 @@
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
-    <button onclick="generatoComputerChoice();bat();">Bat</button>
+    <button onclick="const computerChoice = generatoComputerChoice();
+    const userDecision = 'Bat';
+    userChoice(computerChoice, userDecision);">Bat</button>
 
-    <button onclick="generatoComputerChoice();ball();">Ball</button>
+    <button onclick="computerChoice = generatoComputerChoice();
+    userDecision = 'Ball';
+    userChoice(computerChoice, userDecision);">Ball</button>
 
-    <button onclick="generatoComputerChoice();stump();">Stump</button>
+    <button onclick="computerChoice = generatoComputerChoice();
+    userDecision = 'Stump';
+    userChoice(computerChoice, userDecision);">Stump</button>
     <script src="cricketgame.js"></script>
 </body>
 </html>

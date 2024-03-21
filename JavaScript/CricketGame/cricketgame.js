@@ -1,49 +1,33 @@
-let computerChoice;
 let result;
 function generatoComputerChoice(){
     let randomeNumber = Math.random() * 3;
     
     if(randomeNumber > 0 && randomeNumber <= 1){
-        computerChoice = 'Bat';
+        return 'Bat';
     }else if(randomeNumber >1 && randomeNumber <=2){
-        computerChoice = 'Ball';
+        return 'Ball';
     }
     else{
-        computerChoice = 'Stump';
+        return 'Stump';
     }
 }
-
-function bat(){
-    if(computerChoice == 'Ball'){
-        result = 'User Won.';
-    }
-    else if(computerChoice == 'Bat'){
+function userChoice(computerChoice, userChoice){
+    if(computerChoice == userChoice){
         result = 'Match Tie';
-    }else if(computerChoice == 'Stump'){
+    }
+    else if(userChoice === 'Bat' && computerChoice === 'Ball'){
+        result = 'User Wins';
+    }else if(userChoice === 'Bat' && computerChoice === 'Stump'){
+        result = 'Computer Wins.'
+    }else if(userChoice === 'Ball' && computerChoice === 'Bat'){
+        result ='Computer Wins';
+    }else if(userChoice == 'Ball' && computerChoice === 'Stump'){
+        result = 'User Wins.'
+    }else if(userChoice === 'Stump' && computerChoice === 'Bat'){
+        result ='User Wins';
+    }else if(userChoice == 'Stump' && computerChoice === 'Ball'){
         result = 'Computer Wins.'
     }
 
-    return alert(`Your Have Chosen Bat. Computer Choice is ${computerChoice} : ${result}`);
-}
-function ball(){
-    if(computerChoice == 'Ball'){
-        result = 'Match Tie.';
-    }
-    else if(computerChoice == 'Bat'){
-        result = 'Computer Wins';
-    }else if(computerChoice == 'Stump'){
-        result ='User Wins.';
-    }
-    return alert(`Your Have Chosen Ball. Computer Choice is ${computerChoice} : ${result}`);
-}
-function stump(){
-    if(computerChoice == 'Ball'){
-        result = 'Computer Wins.';
-    }
-    else if(computerChoice == 'Bat'){
-        result= 'User Wins';
-    }else if(computerChoice == 'Stump'){
-        result = 'Math Tie.';
-    }
-    return alert(`Your Have Chosen Stump. Computer Choice is ${computerChoice} : ${result}`);
+    return alert(`Your Have Chosen ${userChoice}. Computer Choice is ${computerChoice} : ${result}`);
 }
